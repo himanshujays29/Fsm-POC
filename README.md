@@ -17,6 +17,14 @@ There are two built-in examples if you just want to poke around:
 
 ---
 
+---
+
+## What it doesn't do
+
+This PoC stops at equations. It does not generate circuits, place components on a canvas, or integrate with CircuitVerse. That's the actual GSoC work this just validates that the synthesis logic is sound before building the real thing.
+
+---
+
 
 ## Drawing your FSM
 
