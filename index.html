@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POC | FSM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">FSM PoC</p>
+                <h1>FSM → Circuit Synthesizer</h1>
+                <p class="hero-text">
+                    A clean proof-of-concept for drawing a Moore FSM and walking it through
+                    encoding, table generation, equation derivation, and Boolean minimization.
+                </p>
+            </div>
+
+            <div class="hero-actions">
+                <button id="load-example-btn" class="button secondary" type="button">Load Sequence Example</button>
+                <button id="load-traffic-btn" class="button secondary" type="button">Load Traffic Light</button>
+                <button id="synthesize-btn" class="button primary" type="button">Synthesize</button>
+                <button id="clear-btn" class="button ghost" type="button">Clear Canvas</button>
+            </div>
+        </header>
+
+        <main class="workspace">
+            <section class="surface board-panel">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">Canvas</p>
+                        <h2>State Diagram</h2>
+                    </div>
+                    <div class="chip-row">
+                        <span class="chip">Double-click to add state</span>
+                        <span class="chip">Shift + drag to add transition</span>
+                        <span class="chip">Click to inspect and edit</span>
+                    </div>
+                </div>
+
+                <div class="canvas-wrap" id="canvas-wrap">
+                    <canvas id="fsm-canvas" aria-label="FSM editor canvas"></canvas>
+                </div>
+
+                <div class="status-strip">
+                    <div class="metric-grid" id="machine-stats"></div>
+                    <p class="status-copy" id="status-copy">
+                        Double-click on the board to add the first state.
+                    </p>
+                </div>
+            </section>
+
+            <aside class="side-column">
+                <section class="surface">
+                    <div class="section-heading compact">
+                        <div>
+                            <p class="section-label">Inspector</p>
+                            <h2>Selection Details</h2>
+                        </div>
+                    </div>
+                    <div id="inspector-panel"></div>
+                </section>
+
+                <section class="surface results-panel">
+                    <div class="section-heading compact">
+                        <div>
+                            <p class="section-label">Report</p>
+                            <h2>Synthesis Pipeline</h2>
+                        </div>
+                    </div>
+                    <div id="results-panel"></div>
+                </section>
+            </aside>
+        </main>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
