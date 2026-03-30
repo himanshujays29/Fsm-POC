@@ -6,6 +6,12 @@ Nothing fancy. You draw a machine, hit synthesize, and watch it break down into 
 
 ---
 
+## Demo
+
+https://himanshujays29.github.io/Fsm-POC/
+
+---
+
 ## What it does
 
 You start by drawing an FSM on a canvas add states, connect them with transitions, label your inputs and outputs. Once you're happy with the diagram, you run synthesis and the app walks you through every stage: how states get encoded into bits, how the transition table gets filled in, and how the final Boolean equations fall out.
